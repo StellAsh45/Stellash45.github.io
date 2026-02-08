@@ -1,69 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0"> 
-    <meta name="description" content="Hoja de vida del estudiante Miguel Angel Lucio"> 
-    <meta name="author" content="Miguel Angel Lucio Guillen"> 
-    <meta name="viewport" content="width=device-width , initial-scale=1.0"> 
-    <title>Hoja de Vida</title>
+    <meta name="description" content="Portafolio de Miguel Angel Lucio">
+    <meta name="author" content="Miguel Angel Lucio Guillen">
+    <title>Portafolio | Miguel Angel Lucio</title>
+    <!-- Fuentes sacadas de fonts.google.com-->
+    <!-- Se seleccionaron 2 fuentes las cuales son Outfit y Rajdhani -->
+    <!-- Outfit 300 (Light),400 (Regular) y 700 (Bold)-->
+    <!-- Rajdhani 500 (Medium) y 700 (Bold)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Libreria FontAwesome para iconos en el sitio mediante cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
-    <div class="cv-container">
-        <!-- Encabezado -->
-        <div class="header">
-            <div class="photo">
-                <img src="images\FotoHV.jpg" alt="Foto de perfil">
+    <div class="main-container">
+        <nav class="navbar">
+            <div class="logo">MIGUEL<span>.DEV</span></div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="inicio" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h3>Hola, soy</h3>
+                    <h1>Miguel Angel<br><span class="neon-text">Lucio Guillén</span></h1>
+                    <p class="role">Ingeniero de Sistemas en Formación & Desarrollador</p>
+                    <p class="description">
+                        Estudiante apasionado por el análisis de datos y la creación de soluciones tecnológicas
+                        innovadoras.
+                        Transformando ideas en realidad digital.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn btn-primary">Contáctame</a>
+                        <a href="#proyectos" class="btn btn-outline">Ver Trabajo</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="img-frame">
+                        <img src="images/FotoHV.jpg" alt="Miguel Angel Lucio">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="section">
+            <h2 class="section-title">Mis <span class="highlight">Proyectos</span></h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="card-image">
+                        <div class="placeholder-img"><i class="fa-solid fa-code"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sistema de Gestión</h3>
+                        <p>Plataforma para optimización de reportes usando Python y SQL.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>SQL</span>
+                        </div>
+                        <a href="#" class="btn-small">Ver Más</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="card-image">
+                        <div class="placeholder-img"><i class="fa-solid fa-database"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Análisis de Datos</h3>
+                        <p>Dashboard interactivo para visualización de KPIs empresariales.</p>
+                        <div class="tags">
+                            <span>PowerBI</span>
+                            <span>Excel</span>
+                        </div>
+                        <a href="#" class="btn-small">Ver Más</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="card-image">
+                        <div class="placeholder-img"><i class="fa-solid fa-laptop-code"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Web Corporativa</h3>
+                        <p>Sitio web para empresa local con diseño moderno.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                        <a href="#" class="btn-small">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Skills Section -->
+        <section id="habilidades" class="section split-section">
+            <div class="education">
+                <h2 class="section-title">Formación</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="year">2022 - Presente</span>
+                        <h3>Ingeniería de Sistemas</h3>
+                        <p>Universidad Santiago de Cali</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2019</span>
+                        <h3>Tecnólogo en Desarrollo de Software</h3>
+                        <p>Instituto ABC</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="profile">
-                <h1>Miguel Angel Lucio Guillén</h1>
-                <p class="presentation">
-                    Estudiante de ingenieria de Sistemas con interés en análisis de datos y desarrollo de soluciones tecnológicas.
-                </p>
+            <div class="skills">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="skill-bars">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>HTML5 & CSS3</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>SQL</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Análisis de Datos</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- A partir de HTMl 5 surge section y footer -->
-        <section>
-            <h2>Formación Académica</h2>
-            <ul>
-                <li>
-                    <strong>Ingeniería de Sistemas</strong><br>
-                    Universidad Santiago de Cali – 2022
-                </li>
-                <li>
-                    <strong>Tecnólogo en Desarrollo de Software</strong><br>
-                    Instituto ABC – 2019
-                </li>
-            </ul>
         </section>
 
-        <!-- Experiencia Laboral -->
-        <section>
-            <h2>Experiencia Laboral</h2>
-            <ul>
-                <li>
-                    <strong>Analista de Sistemas</strong><br>
-                    Empresa TechSoft – 2023 - Actualidad<br>
-                    Desarrollo de reportes, automatización y soporte a sistemas.
-                </li>
-                <li>
-                    <strong>Auxiliar de TI</strong><br>
-                    Empresa DataPlus – 2021 - 2023<br>
-                    Soporte técnico, bases de datos y documentación.
-                </li>
-            </ul>
+        <!-- Experience Section -->
+        <section class="section">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <h3>Analista de Sistemas</h3>
+                    <h4>Empresa TechSoft | 2023 - Actualidad</h4>
+                    <p>Desarrollo de reportes, automatización de procesos y soporte a sistemas críticos.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Auxiliar de TI</h3>
+                    <h4>Empresa DataPlus | 2021 - 2023</h4>
+                    <p>Soporte técnico de nivel 1 y 2, gestión de bases de datos y documentación técnica.</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Habilidades e idiomas</h2>
-        </section>
-
-        <footer>
-            
+        <!-- Footer -->
+        <footer id="contacto" class="footer">
+            <div class="footer-content">
+                <h2>¿Trabajamos juntos?</h2>
+                <p>Estoy disponible para nuevos proyectos y colaboraciones.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i> Email</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Miguel Angel Lucio. Todos los derechos reservados.
+                </div>
+            </div>
         </footer>
     </div>
+
 </body>
+
 </html>
