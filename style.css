@@ -26,7 +26,6 @@ body {
     margin: 0 auto; /* Centrar el contenedor principal horizontalmente */
     background-image:radial-gradient(circle at 10% 20%, rgba(188, 19, 254, 0.1) 30%, transparent 40%), /* circulo superior de color morado transparente */
     radial-gradient(circle at 90% 80%, rgba(0, 243, 255, 0.1) 30%, transparent 40%); /* circulo inferior de color celeste transparente */
-    overflow: hidden; /* Para evitar que los círculos se desborden fuera del contenedor */
     position: relative; /* Para posicionar los círculos de fondo correctamente */
 }
 
@@ -202,4 +201,90 @@ a {
     transition: 0.5s;
 }
 
+.seccion{
+    padding: 20px 50px;
+}
 
+.titulo-seccion {
+    font-size: 42px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.resaltar {
+    color: var(--primario);
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.3); /* Sombra de texto para resaltar la palabra "Proyectos" */
+}
+
+.matriz-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta el número de columnas según el tamaño de la pantalla */
+    gap: 30px; /* Espacio entre las tarjetas de proyecto */
+}
+
+.tarjeta-proyecto {
+    background-color: var(--fondo-tarjetas);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+    border-color: var(--secundario);
+    box-shadow: 0 3px 20px rgba(188, 19, 254, 0.2);
+}
+
+.imagen-tarjeta {
+    height: 180px;
+    background: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+.imagen-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.tarjeta-proyecto:hover .imagen-tarjeta img {
+    transform: scale(1.1);
+}
+
+.contenido-tarjeta {
+    padding: 25px;
+}
+
+.contenido-tarjeta h3 {
+    color: var(--secundario);
+    margin-bottom: 10px;
+}
+
+.contenido-tarjeta p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permitir que las etiquetas se envuelvan a la siguiente línea si no caben en una sola */
+}
+
+.tags span {
+    font-size: 12px;
+    padding: 4px 10px;
+    background: rgba(0, 243, 255, 0.1);
+    color: var(--primario);
+    border-radius: 20px;
+    text-align: center;
+}
