@@ -50,7 +50,7 @@ a {
     position: sticky; /* No se puede mover */
     top: 0; /* Pues pegado arriba */
     z-index: 1000; /* Para asegurarse de que la barra de navegación esté */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.05); /* Línea debajo de la barra de navegación */
+    border-bottom: 2px solid rgba(43, 21, 51, 0.3); /* Línea debajo de la barra de navegación */
 }
 
 .logo {
@@ -76,11 +76,16 @@ a {
     text-shadow: 0 3px 5px rgba(0, 243, 255, 0.7); /* Sombra de texto para resaltar el enlace al pasar el mouse (x,y,blur)*/
 }
 
+section, header, footer {
+    scroll-margin-top: 70px; /*¨Debido a que sin esto la bara de navegacion taparia el titulo de la seccion */
+}
+
+/* Encabezado */
 .inicio {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 200px 0px 0px 100px;
+    padding: 250px 0px 0px 100px;
     height: 600px;
 }
 
@@ -153,33 +158,20 @@ a {
     letter-spacing: 1px;
 }
 
-.btn-contacto {
+.btn-contacto,.btn-trabajo{
     background: var(--gradiente);
     border: 1px solid transparent;
     color: white;
     box-shadow: 0 0 30px rgba(188, 19, 254, 0.4);
 }
 
-.btn-contacto:hover {
+.btn-contacto:hover, .btn-trabajo:hover {
     transform: translateY(-5px); /* Mover el botón hacia arriba al hacer hover */
-    box-shadow: 0 0 40px rgba(188, 19, 254, 0.6);
-}
-
-.btn-trabajo {
-    background: var(--gradiente);
-    border: 1px solid transparent;
-    color: white;
-    box-shadow: 0 0 30px rgba(188, 19, 254, 0.4);
-}
-
-.btn-trabajo:hover {
-    transform: translateY(-5px);
     box-shadow: 0 0 40px rgba(188, 19, 254, 0.6);
 }
 
 .inicio-imagen {
     transform: translateX(600px) translateY(-360px); /* Mover la imagen ligeramente hacia abajo para un mejor equilibrio visual */
-    
 }
 
 .imagen-frame {
@@ -191,6 +183,12 @@ a {
     border: 3px solid var(--primario); /* Primer borde circular */
     box-shadow: 0 0 0 8px var(--fondo-oscuro), 0 0 0 11px var(--secundario); /* Segundo borde circular */
     overflow: hidden; /* Para asegurar que la imagen también sea circular */
+    transition: 0.5s ease;
+}
+
+.imagen-frame:hover {
+    border: 7px solid var(--primario);
+    box-shadow: 0 0 0 10px var(--fondo-oscuro), 0 0 0 15px var(--secundario);
 }
 
 .imagen-frame img{
@@ -201,6 +199,7 @@ a {
     transition: 0.5s;
 }
 
+/* Secciones */ 
 .seccion{
     padding: 20px 50px;
 }
@@ -249,12 +248,12 @@ a {
 .imagen-tarjeta img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
     transition: 0.5s;
 }
 
 .tarjeta-proyecto:hover .imagen-tarjeta img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .contenido-tarjeta {
@@ -287,4 +286,42 @@ a {
     color: var(--primario);
     border-radius: 20px;
     text-align: center;
+}
+
+/* pie de pagina */
+.footer {
+    padding: 50px;
+    background: #02020a;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.redes-sociales a{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes-sociales a:hover {
+    color: var(primario);
+}
+
+.derechos-autor{
+    color: var(--texto-secundario);
+    font-size: 14px;
+    margin-top: 30px;
 }
